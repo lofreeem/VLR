@@ -1,0 +1,478 @@
+/* Основные стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #fafafa;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+    header nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0;
+    }
+
+        header nav .logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #333;
+        }
+
+        header nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+            header nav ul li {
+                margin-left: 20px;
+            }
+
+                header nav ul li a {
+                    text-decoration: none;
+                    color: #666;
+                    transition: color 0.3s ease;
+                }
+
+                    header nav ul li a:hover {
+                        color: #333;
+                    }
+
+.hero {
+    background-image: url('background.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+    .hero h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+
+    .hero button {
+        background-color: #007bff;
+        color: #fff;
+        padding: 12px 24px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .hero button:hover {
+            background-color: #0056b3;
+            transition: background-color 0.3s ease;
+        }
+
+.properties {
+    padding: 60px 0;
+}
+
+    .properties h2 {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+.cards {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    flex: 1;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+    .card img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        margin-bottom: 20px;
+    }
+
+.details h3 {
+    margin-bottom: 10px;
+}
+
+.about {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+}
+
+.contact {
+    padding: 60px 0;
+}
+
+    .contact form {
+        max-width: 400px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact input, .contact textarea {
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .contact textarea {
+        resize: none;
+        min-height: 100px;
+    }
+
+    .contact button[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        padding: 12px 24px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .contact button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.page-transition {
+    transition: opacity 0.5s, transform 0.5s cubic-bezier(0.25, 0.75, 0.45, 0.65);
+}
+
+.outgoing-page {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.incoming-page {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+    .incoming-page.animate {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+.sticky-element {
+    position: fixed;
+    will-change: transform;
+    backface-visibility: hidden;
+    perspective: 1px;
+    transform: translateZ(1px);
+    transition: transform 0.3s ease;
+}
+
+    .sticky-element:hover {
+        transform: scale(1.1);
+    }
+
+.floating-element {
+    position: fixed;
+    animation: floating 5s linear infinite;
+    transition: transform 0.3s ease;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.link {
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+    .link:hover {
+        color: #777;
+        text-decoration: underline;
+    }
+
+.micro-animated-element {
+    transition: transform 0.3s ease;
+}
+
+    .micro-animated-element:hover {
+        transform: scale(1.03);
+    }
+
+.parallax-element {
+    perspective: 1px;
+    transform: translateZ(1px);
+    transition: transform 0.3s ease;
+}
+
+    .parallax-element:hover {
+        transform: scale(1.02);
+    }
+
+.focused-element {
+    transition: transform 0.3s ease;
+}
+
+    .focused-element:focus {
+        transform: scale(1.04);
+    }
+
+.text-moving-element {
+    transition: transform 0.3s ease;
+}
+
+    .text-moving-element:hover {
+        transform: translateY(5px);
+    }
+
+.form-filling-element {
+    transition: background-color 0.3s ease;
+}
+
+    .form-filling-element:focus {
+        background-color: #33b3ff;
+        border: 1px solid #444;
+    }
+
+.state-changing-element {
+    transition: transform 0.3s ease;
+}
+
+    .state-changing-element:hover {
+        transform: scale(1.01);
+    }
+
+.loading-page {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+    .loading-page:loaded {
+        opacity: 1;
+        transition: opacity 0.3s ease-out;
+    }
+
+.copyright {
+    position: fixed;
+    bottom: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    transition: opacity 0.3s ease-in-out;
+}
+
+    .copyright:after {
+        opacity: 1;
+        transition: opacity 0.3s ease-out;
+    }
+
+.animated-loading-page {
+    animation: loadingPageAnimation 1s ease-in-out;
+}
+
+@keyframes loadingPageAnimation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes loadingPageTransition {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.magic-number {
+    font-size: 16px;
+    position: fixed;
+    top: 30px;
+    right: 10px;
+    color: #fff;
+    transition: opacity 0.3s ease-in-out;
+    animation: magicNumberAnimation 1s ease-in-out;
+}
+
+@keyframes magicNumberAnimation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes magicNumberTransition {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.unloadable {
+    display: block;
+    position: fixed;
+    top: 90px;
+    width: 100%;
+    height: 30px;
+    opacity: 0.3s ease-in-out;
+    transition: opacity 0.3s ease-out;
+    animation: unloadableAnimation 1s ease-in-out;
+}
+
+@keyframes unloadableAnimation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes unloadableTransition {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.icon {
+    transition: opacity 0.3s ease-in-out;
+    animation: iconAnimation 1s ease-in-out;
+    transition: transform 0.3s ease;
+}
+
+@keyframes iconAnimation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes iconTransition {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.fullscreen {
+    fullscreen-mode: полноэкранный;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.3s ease-in-out;
+    transition: opacity 0.3s ease-out;
+    animation: fullscreenAnimation 1s ease-in-out;
+    transition: transform 0.3s ease;
+    fullscreen: after
+
+{
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+    animation: fullscreenExitAnimation 1s ease-in-out;
+    transition: transform 0.3s ease;
+    fullscreen: exit
+
+{
+    opacity: 0.3s ease-in-out;
+    transition: opacity 0.3s ease-out;
+    animation: fullscreenExitAnimation 1s ease-in-out;
+    transition: transform 0.3s ease;
+    fullscreen: exitAfter
+
+{
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+    animation: fullscreenExitAnimation 1s ease-in-out;
+    transition: transform 0.3s ease;
+
+    @keyframes fullscreenExitAnimation {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0.3s ease-in-out;
+        }
+
+        fullscreen:exitTransition {
+            opacity: 0.3s ease-in-out;
+            transition: opacity 0.3s ease-out;
+            animation: fullscreenExitAnimation 1s ease-in-out;
+            transition: transform 0.3s ease;
+            fullscreen: exitTransitionAfter
+
+{
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+    animation: fullscreenExitAnimation 1s ease-in-out;
+    transition: transform 0.3s ease;
+    fullscreen: exitTransitionFinal
+

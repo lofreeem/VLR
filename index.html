@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Агентство Недвижимости | SVZ Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Недвижимость ВЛР</a>
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#properties">Объекты</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+            </nav>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Искусство выбора жилья</h1>
+            <p>Откройте для себя возможности с нашим агентством недвижимости с вашим личным риэлтором.</p>
+            <button onclick="scrollToSection('#properties')">Просмотр объектов</button>
+        </div>
+    </section>
+
+    <section id="properties" class="properties">
+        <div class="container">
+            <h2>Наши объекты</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="apartment.jpg" alt="Квартира">
+                    <div class="details">
+                        <h3>Квартира в центре города</h3>
+                        <p>Площадь: 80 м²</p>
+                        <p>Цена: 10 000 000 ₽</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="house.jpg" alt="Дом">
+                    <div class="details">
+                        <h3>Дом с участком</h3>
+                        <p>Площадь: 150 м²</p>
+                        <p>Цена: 20 000 000 ₽</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>О нашем агентстве</h2>
+            <p>ВЛР помогает людям находить своё идеальное жильё. Наша команда профессионалов предлагает индивидуальный подход и гарантирует высокое качество обслуживания.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Свяжитесь с нами</h2>
+            <form>
+                <input type="text" placeholder="Ваше имя">
+                <input type="email" placeholder="Ваш email">
+                <textarea placeholder="Ваше сообщение"></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 ВЛР. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
